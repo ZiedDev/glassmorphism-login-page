@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="background-image-container" id="background-image-container">
+        <img src="backgorund.jpg" alt="background">
+    </div>
+    <div class="forms-container" id="forms-container">
+        <form class="login-form" id="login-form">
+            <h2 class="login-title">Log in</h2>
+            <input class="login-username" id="login-username" type="text" placeholder="Username">
+            <input class="login-password" id="login-password" type="password" placeholder="Password">
+            <div class="login-remember-me-container">
+                <input class="login-remember-me" id="login-remember-me" type="checkbox" name="login-remember-me">
+                <label class="login-remember-me-label" id="login-remember-me-label" for="login-remember-me">Remember
+                    me</label>
+            </div>
+            <input class="login-forgot-password" id="login-forgot-password" type="button" value="Forgot password?">
+            <input class="login-button" id="login-button" type="submit" value="Log in">
+            <div class="login-signup-container">
+                <label class="login-signup-label" id="login-signup-label" for="login-signup">Don't have an
+                    account?</label>
+                <input class="login-signup" id="login-signup" type="button" name="login-signup" value="Sign up">
+
+            </div>
+        </form>
+        <form class="signup-form hidden" id="signup-form">
+            <h2 class="signup-title">Sign up</h2>
+            <input class="signup-username" id="signup-username" type="text" placeholder="Username">
+            <input class="signup-email" id="signup-email" type="email" placeholder="Email">
+            <input class="signup-password" id="signup-password" type="password" placeholder="Password">
+            <input class="signup-button" id="signup-button" type="submit" value="Sign up">
+            <div class="signup-login-container">
+                <label class="signup-login-label" id="signup-login-label" for="">Have an account?</label>
+                <input class="signup-login" id="signup-login" type="button" name="signup-login" value="Login">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

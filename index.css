@@ -1,0 +1,235 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.background-image-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.background-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.forms-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.login-form {
+    border: 1pt rgba(255, 255, 255, 0.25) solid;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    mask-image: rgba(0, 0, 0, 0.5);
+    -webkit-mask-image: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    width: 25rem;
+    height: 22rem;
+    padding: 1rem;
+    margin: 0 1rem;
+
+    display: grid;
+    gap: 0.75rem;
+
+    grid-template-areas:
+        'a a'
+        'b b'
+        'c c'
+        'd e'
+        'f f'
+        'g g';
+}
+
+.login-form *,
+.signup-form * {
+    color: aliceblue;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="email"] {
+    color: aliceblue;
+    border-radius: 0.5rem;
+    border: 1pt rgba(255, 255, 255, 0.25) solid;
+    padding: 0.5rem;
+    background: transparent;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="submit"]::placeholder,
+input[type="email"]::placeholder {
+    color: aliceblue;
+}
+
+input[type="submit"] {
+    background: white;
+    color: black;
+}
+
+.login-title {
+    font-size: xx-large;
+    grid-area: a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-username {
+    grid-area: b;
+}
+
+.login-password {
+    grid-area: c;
+}
+
+.login-remember-me-container {
+    grid-area: d;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    width: 100%;
+}
+
+.login-remember-me {}
+
+.login-forgot-password {
+    grid-area: e;
+    background: none;
+    border: none;
+    text-align: right;
+    cursor: pointer;
+}
+
+.login-button {
+    grid-area: f;
+    cursor: pointer;
+}
+
+.login-signup-container {
+    grid-area: g;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-signup {
+    background: none;
+    border: none;
+    text-align: right;
+    cursor: pointer;
+}
+
+.signup-form {
+    transform: rotateY(90deg);
+    border: 1pt rgba(255, 255, 255, 0.25) solid;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    mask-image: rgba(0, 0, 0, 0.5);
+    -webkit-mask-image: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    width: 25rem;
+    height: 22rem;
+    padding: 1rem;
+    margin: 0 1rem;
+
+    display: grid;
+    gap: 0.75rem;
+
+    grid-template-areas:
+        'a'
+        'b'
+        'c'
+        'd'
+        'f'
+        'g';
+}
+
+.signup-title {
+    grid-area: a;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.signup-username {
+    grid-area: b;
+}
+
+.signup-email {
+    grid-area: c;
+}
+
+.signup-password {
+    grid-area: d;
+}
+
+.signup-button {
+    grid-area: f;
+    cursor: pointer;
+}
+
+.signup-login-container {
+    grid-area: g;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.signup-login {
+    background: none;
+    border: none;
+    text-align: right;
+    cursor: pointer;
+}
+
+@keyframes switchFrom {
+    from {
+        transform: rotateY(0deg);
+        display: grid;
+    }
+
+    to {
+        transform: rotateY(-90deg);
+        display: none;
+    }
+}
+
+@keyframes switchTo {
+    from {
+        transform: rotateY(90deg);
+        display: none;
+    }
+
+    to {
+        transform: rotateY(0deg);
+        display: grid;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
